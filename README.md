@@ -1,54 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaussen Serviços</title>
-  <style>
-    body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }
+# Kaussen Serviços
 
-    h1 {
-      color: #222;
-      font-size: 2em;
-    }
+Website im Aufbau.
 
-    img.logo {
-      width: 200px;
-      max-width: 80%;
-      margin-bottom: 30px;
-    }
-
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      font-size: 18px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 30px;
-      transition: background-color 0.3s;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
-</head>
-<body>
-  <img src="Kaussen_Servicos_Logo_vector_weiss.png" alt="Kaussen Serviços Logo" class="logo" />
-
-  <h1>Website im Aufbau</h1>
-  <p>Wir arbeiten daran, Ihnen bald etwas Besonderes zu bieten.</p>
-
-  <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank">
-    💬 WhatsApp Kontakt
-  </a>
-</body>
-</html>
-
+Besuchen Sie: [www.kaussenservicos.com.br](https://www.kaussenservicos.com.br)
