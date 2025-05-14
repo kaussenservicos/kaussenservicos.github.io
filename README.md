@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaussen Serviços</title>
   <style>
     body {
@@ -41,7 +41,7 @@
   </style>
 </head>
 <body>
-  <img src="Kaussen_Servicos_Logo_verctor_weiss.png" alt="Kaussen Serviços Logo" class="logo">
+  <img src="Kaussen_Servicos_Logo_vector_weiss.png" alt="Kaussen Serviços Logo" class="logo" />
 
   <h1>Website im Aufbau</h1>
   <p>Wir arbeiten daran, Ihnen bald etwas Besonderes zu bieten.</p>
@@ -51,3 +51,4 @@
   </a>
 </body>
 </html>
+
