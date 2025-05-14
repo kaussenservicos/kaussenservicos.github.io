@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaussen Serviços – Em construção</title>
+  <title>Kaussen Serviços</title>
   <style>
     body {
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 100px;
+      padding: 100px 20px;
     }
 
     h1 {
@@ -17,44 +17,37 @@
       font-size: 2em;
     }
 
-    .logo {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 40px;
+    img.logo {
+      width: 200px;
+      max-width: 80%;
+      margin-bottom: 30px;
     }
 
     .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
+      display: inline-block;
       background-color: #25D366;
       color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      transition: background-color 0.3s;
     }
 
     .whatsapp-button:hover {
-      background-color: #1ebd5a;
+      background-color: #1ebe5d;
     }
   </style>
-  <!-- Font Awesome für WhatsApp Icon -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <img src="Kaussen_Servicos_Logo_verctor_weiss.png" alt="Kaussen Serviços Logo" class="logo">
-  <h1>Website em construção</h1>
-  <p>Estamos trabalhando para oferecer algo especial em breve.</p>
 
-  <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <h1>Website im Aufbau</h1>
+  <p>Wir arbeiten daran, Ihnen bald etwas Besonderes zu bieten.</p>
+
+  <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank">
+    💬 WhatsApp Kontakt
   </a>
 </body>
 </html>
