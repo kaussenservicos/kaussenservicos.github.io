@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kaussen Serviços</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,30 +12,52 @@
       background-color: #f4f4f4;
       text-align: center;
     }
+
     img.logo {
       max-width: 300px;
-      margin-bottom: 30px;
+      display: block;
+      margin: 0 auto 30px auto;
     }
+
     select {
-      margin-bottom: 20px;
+      display: block;
+      margin: 0 auto 20px auto;
       padding: 8px;
       font-size: 1em;
     }
+
     .content {
       max-width: 700px;
       margin: auto;
       font-size: 1.2em;
       color: #333;
+      text-align: left;
     }
+
+    .services {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    .services i {
+      color: #0077cc;
+      margin-right: 10px;
+    }
+
     .whatsapp-button {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 40px;
       padding: 12px 20px;
       background-color: #25D366;
       color: white;
       font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .whatsapp-button i {
+      margin-right: 8px;
     }
   </style>
 </head>
@@ -49,42 +72,48 @@
 
   <div id="content-pt" class="content">
     <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
-    <p>
-      Oferecemos serviços profissionais com qualidade e confiança:<br>
-      • Pintura e trabalhos de acabamento<br>
-      • Reformas em geral<br>
-      • Soldagem e estruturas metálicas<br>
-      • Instalações elétricas<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Pintura e trabalhos de acabamento</p>
+      <p><i class="fas fa-tools"></i> Reformas em geral</p>
+      <p><i class="fas fa-hammer"></i> Drywall e divisórias</p>
+      <p><i class="fas fa-wrench"></i> Soldagem e estruturas metálicas</p>
+      <p><i class="fas fa-bolt"></i> Instalações elétricas</p>
+    </div>
+    <p style="margin-top: 30px;">
       Atendimento com excelência e dedicação em cada projeto.
     </p>
   </div>
 
   <div id="content-de" class="content" style="display:none;">
     <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
-    <p>
-      Wir bieten Ihnen hochwertige Dienstleistungen rund ums Haus:<br>
-      • Maler- und Lackierarbeiten<br>
-      • Allgemeine Reformierungen<br>
-      • Schweißarbeiten<br>
-      • Elektroinstallationen<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Maler- und Lackierarbeiten</p>
+      <p><i class="fas fa-tools"></i> Allgemeine Reformierungen</p>
+      <p><i class="fas fa-hammer"></i> Trockenbau (Drywall)</p>
+      <p><i class="fas fa-wrench"></i> Schweißarbeiten</p>
+      <p><i class="fas fa-bolt"></i> Elektroinstallationen</p>
+    </div>
+    <p style="margin-top: 30px;">
       Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.
     </p>
   </div>
 
   <div id="content-en" class="content" style="display:none;">
     <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
-    <p>
-      We offer professional services with quality and reliability:<br>
-      • Painting and finishing work<br>
-      • General renovations<br>
-      • Welding and metal structures<br>
-      • Electrical installations<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Painting and finishing work</p>
+      <p><i class="fas fa-tools"></i> General renovations</p>
+      <p><i class="fas fa-hammer"></i> Drywall and partitions</p>
+      <p><i class="fas fa-wrench"></i> Welding and metal structures</p>
+      <p><i class="fas fa-bolt"></i> Electrical installations</p>
+    </div>
+    <p style="margin-top: 30px;">
       Excellence and dedication in every project.
     </p>
   </div>
 
   <a class="whatsapp-button" href="https://wa.me/55872241042" target="_blank">
-    📱 Fale conosco pelo WhatsApp
+    <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
   </a>
 
   <script>
@@ -96,3 +125,4 @@
   </script>
 </body>
 </html>
+
