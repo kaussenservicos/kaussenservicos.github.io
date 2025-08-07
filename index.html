@@ -1,65 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Kaussen Serviços</title>
   <style>
     body {
-      background-color: #f0f0f0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f4f4f4;
       text-align: center;
-      padding: 100px 20px;
     }
-
-    h1 {
-      color: #222;
-      font-size: 2em;
-    }
-
-    p {
-      font-size: 18px;
-      color: #333;
-    }
-
     img.logo {
-      width: 300px;      /* Breite auf 300px erhöht */
-      max-width: 80%;
+      max-width: 300px;
       margin-bottom: 30px;
     }
-
+    select {
+      margin-bottom: 20px;
+      padding: 8px;
+      font-size: 1em;
+    }
+    .content {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2em;
+      color: #333;
+    }
     .whatsapp-button {
       display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
       background-color: #25D366;
       color: white;
-      font-size: 18px;
-      padding: 12px 24px;
-      border-radius: 8px;
+      font-weight: bold;
       text-decoration: none;
-      margin-top: 30px;
-      transition: background-color 0.3s;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <!-- Pfad zur SVG-Datei anpassen, z.B. 'assets/...' falls im assets-Ordner -->
-  <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços Logo" class="logo" />
+  <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços Logo" class="logo">
 
-  <h1>Website em construção • Website im Aufbau • Website under construction</h1>
-  <p>Estamos trabalhando para trazer algo especial em breve.<br />
-     Wir arbeiten daran, Ihnen bald etwas Besonderes zu bieten.<br />
-     We’re working on something special for you.</p>
+  <select onchange="changeLanguage(this.value)">
+    <option value="pt">Português</option>
+    <option value="de">Deutsch</option>
+    <option value="en">English</option>
+  </select>
 
-  <a
-    class="whatsapp-button"
-    href="https://wa.me/5511941188664"
-    target="_blank"
-  >
-    💬 WhatsApp Kontakt • Contato • Contact
+  <div id="content-pt" class="content">
+    <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
+    <p>
+      Oferecemos serviços profissionais com qualidade e confiança:<br>
+      • Pintura e trabalhos de acabamento<br>
+      • Reformas em geral<br>
+      • Soldagem e estruturas metálicas<br>
+      • Instalações elétricas<br><br>
+      Atendimento com excelência e dedicação em cada projeto.
+    </p>
+  </div>
+
+  <div id="content-de" class="content" style="display:none;">
+    <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
+    <p>
+      Wir bieten Ihnen hochwertige Dienstleistungen rund ums Haus:<br>
+      • Maler- und Lackierarbeiten<br>
+      • Allgemeine Reformierungen<br>
+      • Schweißarbeiten<br>
+      • Elektroinstallationen<br><br>
+      Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.
+    </p>
+  </div>
+
+  <div id="content-en" class="content" style="display:none;">
+    <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
+    <p>
+      We offer professional services with quality and reliability:<br>
+      • Painting and finishing work<br>
+      • General renovations<br>
+      • Welding and metal structures<br>
+      • Electrical installations<br><br>
+      Excellence and dedication in every project.
+    </p>
+  </div>
+
+  <a class="whatsapp-button" href="https://wa.me/55872241042" target="_blank">
+    📱 Fale conosco pelo WhatsApp
   </a>
+
+  <script>
+    function changeLanguage(lang) {
+      document.getElementById('content-pt').style.display = lang === 'pt' ? 'block' : 'none';
+      document.getElementById('content-de').style.display = lang === 'de' ? 'block' : 'none';
+      document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
