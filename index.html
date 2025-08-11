@@ -3,147 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Kaussen Serviços</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root {
-      --header-height: 360px;
-    }
-    * { box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      padding: 40px;
       background-color: #f4f4f4;
       text-align: center;
       color: #333;
     }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-height);
-      z-index: 1000;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-
-    .header-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    img.logo {
+      max-width: 300px;
       display: block;
+      margin: 0 auto 30px auto;
     }
 
-    .logo {
-      position: absolute;
-      top: 60px;
-      left: 60px;
-      width: 200px;
-      height: auto;
-      z-index: 1010;
-      background: rgba(255,255,255,0.0);
-      padding: 4px;
-      border-radius: 4px;
-    }
-
-    .language-select {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      z-index: 1010;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid rgba(0,0,0,0.08);
-      background: rgba(255,255,255,0.9);
-      font-size: 0.95rem;
-    }
-
-    .overlay {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 18px;
-      z-index: 1010;
-      color: #fff;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      font-size: 1.05rem;
-      background: rgba(0,0,0,0.25);
-      padding: 6px 12px;
-      border-radius: 6px;
+    select {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 8px;
+      font-size: 1em;
     }
 
     .content {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2em;
+      color: #333;
       text-align: left;
-      padding: 24px;
-      padding-top: calc(var(--header-height) + 30px);
+    }
+
+    .services {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    .services i {
+      color: #0077cc;
+      margin-right: 10px;
     }
 
     .whatsapp-button {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 40px;
       padding: 12px 20px;
       background-color: #25D366;
       color: white;
       font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
-      font-size: 1.05em;
+      font-size: 1.1em;
+    }
+
+    .whatsapp-button i {
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="vorher-nachher.jpg" alt="Vorher-Nachher Renovierung" class="header-img">
-    <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Logo" class="logo">
-    <select class="language-select" onchange="changeLanguage(this.value)">
-      <option value="pt">Português</option>
-      <option value="de">Deutsch</option>
-      <option value="en">English</option>
-    </select>
-    <div class="overlay">Kaussen Serviços – Qualität, Präzision, Vertrauen</div>
-  </div>
+  <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços Logo" class="logo">
+
+  <select onchange="changeLanguage(this.value)">
+    <option value="pt">Português</option>
+    <option value="de">Deutsch</option>
+    <option value="en">English</option>
+  </select>
 
   <div id="content-pt" class="content">
     <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
-    <p>
-      Oferecemos serviços profissionais com qualidade e confiança:<br>
-      • Pintura e trabalhos de acabamento<br>
-      • Reformas em geral<br>
-      • Soldagem e estruturas metálicas<br>
-      • Instalações elétricas<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Pintura e trabalhos de acabamento</p>
+      <p><i class="fas fa-tools"></i> Reformas em geral</p>
+      <p><i class="fas fa-hammer"></i> Drywall e divisórias</p>
+      <p><i class="fas fa-fire"></i> Soldagem e estruturas metálicas</p>
+      <p><i class="fas fa-bolt"></i> Instalações elétricas</p>
+    </div>
+    <p style="margin-top: 30px;">
       Atendimento com excelência e dedicação em cada projeto.
     </p>
   </div>
 
   <div id="content-de" class="content" style="display:none;">
     <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
-    <p>
-      Wir bieten Ihnen hochwertige Dienstleistungen rund ums Haus:<br>
-      • Maler- und Lackierarbeiten<br>
-      • Allgemeine Reformierungen<br>
-      • Schweißarbeiten<br>
-      • Elektroinstallationen<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Maler- und Lackierarbeiten</p>
+      <p><i class="fas fa-tools"></i> Allgemeine Reformierungen</p>
+      <p><i class="fas fa-hammer"></i> Trockenbau (Drywall)</p>
+      <p><i class="fas fa-fire"></i> Schweißarbeiten</p>
+      <p><i class="fas fa-bolt"></i> Elektroinstallationen</p>
+    </div>
+    <p style="margin-top: 30px;">
       Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.
     </p>
   </div>
 
   <div id="content-en" class="content" style="display:none;">
     <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
-    <p>
-      We offer professional services with quality and reliability:<br>
-      • Painting and finishing work<br>
-      • General renovations<br>
-      • Welding and metal structures<br>
-      • Electrical installations<br><br>
+    <div class="services">
+      <p><i class="fas fa-paint-roller"></i> Painting and finishing work</p>
+      <p><i class="fas fa-tools"></i> General renovations</p>
+      <p><i class="fas fa-hammer"></i> Drywall and partitions</p>
+      <p><i class="fas fa-fire"></i> Welding and metal structures</p>
+      <p><i class="fas fa-bolt"></i> Electrical installations</p>
+    </div>
+    <p style="margin-top: 30px;">
       Excellence and dedication in every project.
     </p>
   </div>
 
   <a class="whatsapp-button" href="https://wa.me/55872241042" target="_blank">
-    📱 Fale conosco pelo WhatsApp
+    <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
   </a>
 
   <script>
@@ -155,6 +126,7 @@
   </script>
 </body>
 </html>
+
 
 
 
