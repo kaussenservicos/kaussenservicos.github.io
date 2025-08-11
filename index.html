@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Kaussen Serviços</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    :root{
-      --header-height: 360px; /* anpassen wenn du andere Höhe willst */
+    :root {
+      --header-height: 360px;
     }
-    *{box-sizing: border-box}
+    * { box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -18,7 +17,6 @@
       color: #333;
     }
 
-    /* Fixierter Header */
     .header {
       position: fixed;
       top: 0;
@@ -26,32 +24,29 @@
       width: 100%;
       height: var(--header-height);
       z-index: 1000;
-      overflow: hidden; /* Bild beschneidet, wenn nötig */
+      overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     }
 
-    /* Header Bild (Vorher / Nachher) */
-    .header .header-img {
+    .header-img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* füllt den Header, schneidet bei Bedarf zu */
+      object-fit: cover;
       display: block;
     }
 
-    /* Logo oben links */
     .logo {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      width: 110px;    /* verkleinert */
+      top: 60px;
+      left: 60px;
+      width: 200px;
       height: auto;
-      z-index: 1010;   /* über dem Header-Bild */
-      background: rgba(255,255,255,0.0); /* optional: weißer Hintergrund z.B. rgba(255,255,255,0.8) */
+      z-index: 1010;
+      background: rgba(255,255,255,0.0);
       padding: 4px;
       border-radius: 4px;
     }
 
-    /* Sprachauswahl oben rechts */
     .language-select {
       position: absolute;
       top: 12px;
@@ -64,8 +59,7 @@
       font-size: 0.95rem;
     }
 
-    /* Optional: halbtransparenter Overlay-Text (z.B. Slogan) */
-    .header .overlay {
+    .overlay {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -79,7 +73,6 @@
       border-radius: 6px;
     }
 
-    /* Platzhalter für Content, damit Header nicht überlappt */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -87,9 +80,6 @@
       padding: 24px;
       padding-top: calc(var(--header-height) + 30px);
     }
-
-    .services { line-height: 1.9; }
-    .services i { color: #0077cc; margin-right: 10px; }
 
     .whatsapp-button {
       display: inline-block;
@@ -102,90 +92,65 @@
       border-radius: 5px;
       font-size: 1.05em;
     }
-
-    /* Responsive: bei kleinen Bildschirmen Header-Höhe reduzieren */
-    @media (max-width: 720px){
-      :root{ --header-height: 240px; }
-      .logo{ width: 86px; }
-      .header .overlay{ font-size: 0.9rem; bottom: 10px; }
-    }
   </style>
 </head>
 <body>
-
-  <!-- Fixierter Header mit generiertem Vorher/Nachher-Bild -->
-  <header class="header" role="banner">
-    <!-- Bild: ersetze dateiname falls nötig -->
-    <img src="vorher-nachher-generated.jpg" alt="Vorher und Nachher Renovierung" class="header-img">
-
-    <!-- Logo (klein oben links) -->
-    <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços" class="logo">
-
-    <!-- Sprache oben rechts -->
-    <select class="language-select" onchange="changeLanguage(this.value)" aria-label="Sprache wählen">
+  <div class="header">
+    <img src="vorher-nachher.jpg" alt="Vorher-Nachher Renovierung" class="header-img">
+    <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Logo" class="logo">
+    <select class="language-select" onchange="changeLanguage(this.value)">
       <option value="pt">Português</option>
       <option value="de">Deutsch</option>
       <option value="en">English</option>
     </select>
+    <div class="overlay">Kaussen Serviços – Qualität, Präzision, Vertrauen</div>
+  </div>
 
-    <!-- Optionaler Slogan über dem Bild -->
-    <div class="overlay">Renovação com qualidade | Kaussen Serviços</div>
-  </header>
+  <div id="content-pt" class="content">
+    <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
+    <p>
+      Oferecemos serviços profissionais com qualidade e confiança:<br>
+      • Pintura e trabalhos de acabamento<br>
+      • Reformas em geral<br>
+      • Soldagem e estruturas metálicas<br>
+      • Instalações elétricas<br><br>
+      Atendimento com excelência e dedicação em cada projeto.
+    </p>
+  </div>
 
-  <!-- Hauptinhalt -->
-  <main class="content" role="main">
-    <div id="content-pt">
-      <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
-      <div class="services">
-        <p><i class="fas fa-paint-roller"></i> Pintura e trabalhos de acabamento</p>
-        <p><i class="fas fa-tools"></i> Reformas em geral</p>
-        <p><i class="fas fa-hammer"></i> Drywall e divisórias</p>
-        <p><i class="fas fa-fire"></i> Soldagem e estruturas metálicas</p>
-        <p><i class="fas fa-bolt"></i> Instalações elétricas</p>
-      </div>
-      <p style="margin-top: 20px;">Atendimento com excelência e dedicação em cada projeto.</p>
-    </div>
+  <div id="content-de" class="content" style="display:none;">
+    <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
+    <p>
+      Wir bieten Ihnen hochwertige Dienstleistungen rund ums Haus:<br>
+      • Maler- und Lackierarbeiten<br>
+      • Allgemeine Reformierungen<br>
+      • Schweißarbeiten<br>
+      • Elektroinstallationen<br><br>
+      Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.
+    </p>
+  </div>
 
-    <div id="content-de" style="display:none">
-      <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
-      <div class="services">
-        <p><i class="fas fa-paint-roller"></i> Maler- und Lackierarbeiten</p>
-        <p><i class="fas fa-tools"></i> Allgemeine Reformierungen</p>
-        <p><i class="fas fa-hammer"></i> Trockenbau (Drywall)</p>
-        <p><i class="fas fa-fire"></i> Schweißarbeiten</p>
-        <p><i class="fas fa-bolt"></i> Elektroinstallationen</p>
-      </div>
-      <p style="margin-top: 20px;">Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.</p>
-    </div>
+  <div id="content-en" class="content" style="display:none;">
+    <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
+    <p>
+      We offer professional services with quality and reliability:<br>
+      • Painting and finishing work<br>
+      • General renovations<br>
+      • Welding and metal structures<br>
+      • Electrical installations<br><br>
+      Excellence and dedication in every project.
+    </p>
+  </div>
 
-    <div id="content-en" style="display:none">
-      <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
-      <div class="services">
-        <p><i class="fas fa-paint-roller"></i> Painting and finishing work</p>
-        <p><i class="fas fa-tools"></i> General renovations</p>
-        <p><i class="fas fa-hammer"></i> Drywall and partitions</p>
-        <p><i class="fas fa-fire"></i> Welding and metal structures</p>
-        <p><i class="fas fa-bolt"></i> Electrical installations</p>
-      </div>
-      <p style="margin-top: 20px;">Excellence and dedication in every project.</p>
-    </div>
-
-    <a class="whatsapp-button" href="https://wa.me/55872241042" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
-    </a>
-
-    <!-- Demo-Filler, damit Scroll sichtbar wird -->
-    <section style="margin-top:40px;">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... (füge hier echten Inhalt ein)</p>
-      <p style="height:1200px"></p>
-    </section>
-  </main>
+  <a class="whatsapp-button" href="https://wa.me/55872241042" target="_blank">
+    📱 Fale conosco pelo WhatsApp
+  </a>
 
   <script>
     function changeLanguage(lang) {
-      document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-      document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
-      document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+      document.getElementById('content-pt').style.display = lang === 'pt' ? 'block' : 'none';
+      document.getElementById('content-de').style.display = lang === 'de' ? 'block' : 'none';
+      document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
     }
   </script>
 </body>
