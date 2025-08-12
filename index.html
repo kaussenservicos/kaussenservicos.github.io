@@ -104,15 +104,27 @@
     }
 
     /* Responsive: bei kleinen Bildschirmen Header-Höhe reduzieren */
-@media ( max-width : 720 px ) {
-  : root { --header-height : 240 px ; }
-  . logo { width : 86 px ; left : 12 px ; top : 20 px ; }
-  . header . overlay { font-size : 0.9 rem ; bottom : 10 px ; }
+@media (max-width: 720px) {
+  :root {
+    --header-height: 240px;
+  }
 
-  . image-gallery img {
-    width : 48 % ;
+  .logo {
+    width: 86px;
+    left: 12px;
+    top: 20px;
+  }
+
+  .header .overlay {
+    font-size: 0.9rem;
+    bottom: 10px;
+  }
+
+  .image-gallery img {
+    width: 48%;
   }
 }
+
 
 /* Galerie außerhalb des Media-Blocks */
 .image-gallery {
