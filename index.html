@@ -225,6 +225,15 @@
   <p><strong>Warum Kaussen?</strong> Erfahrung, Zuverlässigkeit, saubere Ausführung, fachkundige Beratung und Anpassung an brasilianische Wetterbedingungen.</p>
 </section>
 
+    <!-- Bildergalerie für Maler- und Lackierarbeiten -->
+<div class="image-gallery painting-gallery">
+  <img src="malen1.jpg" alt="Innenanstrich">
+  <img src="malen2.jpg" alt="Fassadenanstrich">
+  <img src="malen3.jpg" alt="Torlackierung">
+  <img src="malen4.jpg" alt="Spritzlackierung">
+</div>
+
+
    <!-- Reparaturen & Schweißarbeiten – Deutsch -->
 <section style="margin-top:40px; display:none;" id="services-welding-de">
   <h2>Reparaturen und Schweißarbeiten für Tore und Überdachungen</h2>
@@ -267,6 +276,39 @@
   <p><strong>Why choose Kaussen?</strong> Because we don’t just repair – we enhance, with experience, precision, and a commitment to quality.</p>
 </section>
  
+<!-- Bildergalerie für Schweißarbeiten -->
+<div class="image-gallery">
+  <img src="bild1.jpg" alt="Schweißarbeit 1">
+  <img src="bild2.jpg" alt="Schweißarbeit 2">
+  <img src="bild3.jpg" alt="Schweißarbeit 3">
+  <img src="bild4.jpg" alt="Schweißarbeit 4">
+</div>
+
+<style>
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: calc(25% - 16px);
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* Mobilfreundlich */
+@media (max-width: 720px) {
+  .image-gallery img {
+    width: 48%;
+  }
+}
+</style>
 
 
 </p>
