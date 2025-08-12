@@ -169,7 +169,16 @@
       </div>
       <p style="margin-top: 20px;">Excellence and dedication in every project.</p>
     </div>
-    <section style="margin-top:40px;" id="services-detailed-en">
+
+
+    <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
+    </a>
+
+    <!-- Demo-Filler, damit Scroll sichtbar wird -->
+    <section style="margin-top:40px;">
+      <p><!-- Erweiterte Leistungen auf Portugiesisch -->
+<section style="margin-top:40px; display:none;" id="services-detailed-en">
   <h2>Painting and Coating Services with Quality and Experience</h2>
   <p>We bring color and protection to everything that matters to you – indoors and outdoors. With experience and professional equipment, we deliver precise and long-lasting painting and coating services – for buildings, metal structures, and more.</p>
   <ul>
@@ -182,38 +191,22 @@
   <p><strong>Why choose Kaussen?</strong> Experience, reliability, clean execution, expert advice, and adaptation to Brazilian weather conditions.</p>
 </section>
 
-
-    <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
-    </a>
-
-    <!-- Demo-Filler, damit Scroll sichtbar wird -->
-    <section style="margin-top:40px;">
-      <p><!-- Erweiterte Leistungen auf Portugiesisch -->
-<section style="margin-top:40px;" id="servicos-detalhados-pt">
-  <h2>Serviços de pintura e revestimento com qualidade</h2>
-  <p>Aplicamos cor e proteção em tudo que é importante para você – por dentro e por fora. Com experiência e equipamentos profissionais, realizamos serviços precisos e duradouros em edifícios, estruturas metálicas e muito mais.</p>
-  <ul>
-    <li><strong>Pintura interna e decoração:</strong> Ambientes com acabamento limpo, tintas de qualidade e efeitos criativos sob demanda.</li>
-    <li><strong>Pintura de fachadas:</strong> Proteção contra umidade, sol e sujeira com produtos adequados ao clima brasileiro.</li>
-    <li><strong>Pintura de portões metálicos:</strong> Preparação e pintura para proteção duradoura contra corrosão.</li>
-    <li><strong>Pintura com pistola e sistema Airless:</strong> Resultados rápidos e uniformes em grandes áreas ou locais difíceis.</li>
-    <li><strong>Técnicas com rolo e pincel:</strong> Ideal para superfícies delicadas ou trabalhos detalhados.</li>
-  </ul>
-  <p><strong>Por que escolher a Kaussen?</strong> Experiência, confiabilidade, execução limpa, orientação profissional e adaptação ao clima brasileiro.</p>
-</section>
 </p>
       <p style="height:1200px"></p>
     </section>
   </main>
 
   <script>
-    function changeLanguage(lang) {
-      document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-      document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
-      document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
-    }
-  </script>
+function changeLanguage(lang) {
+  document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+
+  document.getElementById('servicos-detalhados-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('services-detailed-en').style.display = (lang === 'en') ? 'block' : 'none';
+}
+</script>
+
 </body>
 </html>
 
