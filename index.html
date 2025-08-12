@@ -128,11 +128,11 @@
 
 /* Galerie außerhalb des Media-Blocks */
 .image-gallery {
-  display : flex ;
-  flex-wrap : wrap ;
-  justify-content : center ;
-  gap : 16 px ;
-  margin-top : 30 px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
 }
 
 .image-gallery img {
@@ -144,11 +144,25 @@
   object-fit: cover;
 }
 
+/* Hover-Effekt für Malerbilder */
+.painting-gallery img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.painting-gallery img:hover {
+  transform: scale(1.02);
+}
 
 /* Mobilfreundlich */
 @media (max-width: 720px) {
   .image-gallery img {
     width: 48%;
+  }
+
+  .painting-gallery img {
+    width: 48%;
+    max-width: 160px;
   }
 }
 </style>
