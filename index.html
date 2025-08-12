@@ -6,9 +6,7 @@
   <title>Kaussen Serviços</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root {
-      --header-height: 360px; /* anpassen */
-    }
+    :root { --header-height: 360px; }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -28,7 +26,6 @@
       z-index: 1000;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      /* kein Hintergrund-Farbwert hier (kein Gelb) */
     }
     .header .header-img {
       width: 100%;
@@ -37,18 +34,17 @@
       display: block;
     }
 
-    /* Logo oben links (verkleinert) */
+    /* Logo oben links */
     .logo {
       position: absolute;
       top: 12px;
       left: 12px;
-      width: 110px; /* verkleinert */
+      width: 110px;
       height: auto;
       z-index: 1010;
       padding: 4px;
       border-radius: 4px;
-      /* optionaler leichter Hintergrund, wenn Lesbarkeit nötig:
-         background: rgba(255,255,255,0.85); */
+      /* bei Bedarf: background: rgba(255,255,255,0.85); */
     }
 
     /* Sprachwahl oben rechts */
@@ -64,7 +60,6 @@
       font-size: 0.95rem;
     }
 
-    /* optionaler Slogan über dem Bild */
     .header .overlay {
       position: absolute;
       left: 50%;
@@ -80,7 +75,7 @@
       pointer-events: none;
     }
 
-    /* Inhalt (Platz schaffen damit Header nicht überlappt) */
+    /* Content */
     .content {
       max-width: 900px;
       margin: 0 auto;
@@ -92,7 +87,7 @@
     .services { line-height: 1.9; }
     .services i { color: #0077cc; margin-right: 10px; }
 
-    /* kleiner WhatsApp-Button (wie gewünscht) */
+    /* kleiner WhatsApp-Button */
     .whatsapp-button {
       display: inline-flex;
       align-items: center;
@@ -109,7 +104,19 @@
     }
     .whatsapp-button i { font-size: 1.05rem; }
 
-    /* Responsive */
+    /* Foto-Platzhalter */
+    .foto-placeholder {
+      border: 2px dashed #ccc;
+      background: #eee;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      margin: 18px 0;
+      font-size: 16px;
+    }
+
     @media (max-width: 720px) {
       :root { --header-height: 240px; }
       .logo { width: 86px; top: 10px; left: 10px; }
@@ -120,9 +127,9 @@
 </head>
 <body>
 
-  <!-- Header mit deinem generierten Vorher/Nachher-Bild -->
+  <!-- Header: ersetze den Bildnamen durch dein Bild -->
   <header class="header" role="banner" aria-label="Vorher Nachher Header">
-    <img src="Renovierung im Vergleich.png" alt="Vorher / Nachher Renovierung" class="header-img">
+    <img src="vorher-nachher-generated.jpg" alt="Vorher / Nachher Renovierung" class="header-img">
     <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços Logo" class="logo">
     <select class="language-select" onchange="changeLanguage(this.value)" aria-label="Escolha o idioma">
       <option value="pt">Português</option>
@@ -132,34 +139,50 @@
     <div class="overlay">Renovação com qualidade | Kaussen Serviços</div>
   </header>
 
-  <!-- Hauptinhalt -->
   <main class="content" role="main" id="main-content">
-    <div id="content-pt">
+    <!-- PORTUGUÊS (padrão) -->
+    <section id="content-pt">
       <h1>Kaussen Serviços – Soluções completas para sua obra</h1>
 
-      <!-- Platzhalter-Foto (falls du ein zusätzliches Bild in den Content willst) -->
-      <div style="border:2px dashed #ccc; background:#eee; height:220px; display:flex; align-items:center; justify-content:center; color:#666; margin:18px 0;">
-        Espaço para uma foto (substitua por sua imagem)
-      </div>
+      <!-- Foto-Platzhalter (im Contentbereich) -->
+      <div class="foto-placeholder">Espaço para Foto — substitua por sua imagem</div>
 
-      <div class="services">
-        <p><i class="fas fa-paint-roller"></i> Pintura e trabalhos de acabamento</p>
-        <p><i class="fas fa-tools"></i> Reformas em geral</p>
-        <p><i class="fas fa-hammer"></i> Drywall e divisórias</p>
-        <p><i class="fas fa-fire"></i> Soldagem e estruturas metálicas</p>
-        <p><i class="fas fa-bolt"></i> Instalações elétricas</p>
-      </div>
+      <h2>Pintura e Serviços com Qualidade e Experiência</h2>
+      <p>Levamos cor e proteção para tudo o que é importante para você – tanto no interior quanto no exterior. Com experiência e equipamentos profissionais, realizamos serviços de pintura e revestimento precisos e duradouros – em prédios, estruturas metálicas e muito mais.</p>
 
-      <p style="margin-top:20px;">Atendimento com excelência e dedicação em cada projeto.</p>
+      <h2>Nossos Serviços:</h2>
+      <ol>
+        <li><strong>Pintura Interna e Design de Ambientes</strong><br>
+        Seja sala, quarto ou escritório – deixamos seus espaços internos mais bonitos com tintas de alta qualidade, acabamento limpo e atenção aos detalhes. Também oferecemos efeitos criativos, contrastes ou superfícies texturizadas.</li>
 
-      <!-- kleinerer WhatsApp-Button (leitet an +55 11 94118-8664) -->
-      <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        Fale conosco
-      </a>
-    </div>
+        <li><strong>Pintura de Fachadas</strong><br>
+        Proteção e beleza para o seu imóvel: pintamos fachadas de forma profissional – contra umidade, sol e sujeira. Usamos produtos adequados para o clima brasileiro, mesmo em condições climáticas desafiadoras.</li>
 
-    <div id="content-de" style="display:none">
+        <li><strong>Pintura de Portões e Estruturas Metálicas</strong><br>
+        Seja portão de garagem, entrada ou grades – preparamos, lixamos e pintamos superfícies metálicas para proteção de longo prazo contra corrosão.</li>
+
+        <li><strong>Pintura com Pistola e Sistema Airless</strong><br>
+        Para resultados uniformes, lisos e rápidos, utilizamos sistemas profissionais de pulverização – como pistola ou equipamentos Airless. Ideal para grandes áreas, portões, paredes ou locais de difícil acesso.</li>
+
+        <li><strong>Técnicas com Rolo e Pincel</strong><br>
+        Para superfícies sensíveis, áreas pequenas ou trabalhos detalhados, utilizamos métodos clássicos com rolo ou pincel – de acordo com a necessidade e o tipo de superfície.</li>
+      </ol>
+
+      <h2>Por que escolher a gente?</h2>
+      <ul>
+        <li>Experiência e confiabilidade</li>
+        <li>Execução limpa e dentro do prazo</li>
+        <li>Ferramentas e materiais profissionais</li>
+        <li>Consultoria na escolha de cores e materiais</li>
+        <li>Adaptação ao clima brasileiro</li>
+      </ul>
+
+      <p><strong>Entre em contato agora!</strong><br>
+      Atendemos pessoalmente – no local ou por telefone. Vamos juntos encontrar a melhor solução para o seu projeto. Seja construção nova, reforma ou pintura de proteção: você tem um parceiro forte ao seu lado.</p>
+    </section>
+
+    <!-- DE / EN (ausgeblendet, falls benötigt) -->
+    <section id="content-de" style="display:none">
       <h1>Kaussen Serviços – Ihr Partner für Bau und Renovierung</h1>
       <div class="services">
         <p><i class="fas fa-paint-roller"></i> Maler- und Lackierarbeiten</p>
@@ -169,12 +192,9 @@
         <p><i class="fas fa-bolt"></i> Elektroinstallationen</p>
       </div>
       <p style="margin-top:20px;">Verlassen Sie sich auf Qualität, Zuverlässigkeit und brasilianisches Handwerkskönnen.</p>
-      <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Fale conosco
-      </a>
-    </div>
+    </section>
 
-    <div id="content-en" style="display:none">
+    <section id="content-en" style="display:none">
       <h1>Kaussen Serviços – Complete solutions for your construction needs</h1>
       <div class="services">
         <p><i class="fas fa-paint-roller"></i> Painting and finishing work</p>
@@ -184,16 +204,16 @@
         <p><i class="fas fa-bolt"></i> Electrical installations</p>
       </div>
       <p style="margin-top:20px;">Excellence and dedication in every project.</p>
-      <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Contact us
+    </section>
+
+    <!-- ganz zum Schluss: kleiner WhatsApp-Button (leitet an +55 11 94118-8664) -->
+    <div style="text-align:center; margin:28px 0 60px 0;">
+      <a class="whatsapp-button" href="https://wa.me/5511941188664" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        Fale conosco
       </a>
     </div>
 
-    <!-- Platzhalter-Inhalt damit Scroll sichtbar ist -->
-    <section style="margin-top:28px;">
-      <p>Hier kannst du zusätzlichen Text, Referenzen oder Kundenbewertungen einfügen.</p>
-      <p style="height:900px;"></p>
-    </section>
   </main>
 
   <script>
@@ -205,6 +225,7 @@
   </script>
 </body>
 </html>
+
 
 
 
