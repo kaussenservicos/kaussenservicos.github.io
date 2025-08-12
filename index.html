@@ -232,17 +232,22 @@
   </main>
 
   <script>
-function changeLanguage(lang) {
-  document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-  document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
-  document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+  function changeLanguage(lang) {
+    document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+    document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
+    document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+    document.getElementById('servicos-detalhados-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+    document.getElementById('services-detailed-en').style.display = (lang === 'en') ? 'block' : 'none';
+    document.getElementById('services-detailed-de').style.display = (lang === 'de') ? 'block' : 'none';
+  }
 
-  document.getElementById('servicos-detalhados-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-  document.getElementById('services-detailed-en').style.display = (lang === 'en') ? 'block' : 'none';
-  document.getElementById('services-detailed-de').style.display = (lang === 'de') ? 'block' : 'none';
-}
-
+  // 🧠 Automatisch Sprache setzen beim Laden
+  window.addEventListener('DOMContentLoaded', () => {
+    const select = document.querySelector('.language-select');
+    changeLanguage(select.value);
+  });
 </script>
+
 
 </body>
 </html>
