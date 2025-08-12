@@ -104,21 +104,41 @@
     }
 
     /* Responsive: bei kleinen Bildschirmen Header-Höhe reduzieren */
-    @media (max-width: 720px){
-  :root{ --header-height: 240px; }
-  .logo{
-    width: 86px;
-    left: 12px;
-    top: 20px;
-  }
-  .header .overlay{
-    font-size: 0.9rem;
-    bottom: 10px;
+@media ( max-width : 720 px ) {
+  : root { --header-height : 240 px ; }
+  . logo { width : 86 px ; left : 12 px ; top : 20 px ; }
+  . header . overlay { font-size : 0.9 rem ; bottom : 10 px ; }
+
+  . image-gallery img {
+    width : 48 % ;
   }
 }
 
-    }
-  </style>
+/* Galerie außerhalb des Media-Blocks */
+.image-gallery {
+  display : flex ;
+  flex-wrap : wrap ;
+  justify-content : center ;
+  gap : 16 px ;
+  margin-top : 30 px ;
+}
+
+.image-gallery img {
+  width : calc ( 25 % - 16 px ) ;
+  max-width : 220 px ;
+  height : auto ;
+  border-radius : 6 px ;
+  box-shadow : 0 2 px 6 px rgba ( 0 , 0 , 0 , 0.15 ) ;
+  object-fit : cover ;
+}
+
+/* Mobilfreundlich */
+@media (max-width: 720px) {
+  .image-gallery img {
+    width: 48%;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -285,21 +305,6 @@
 </div>
 
 <style>
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 30px;
-}
-
-.image-gallery img {
-  width: calc(25% - 16px);
-  max-width: 220px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  object-fit: cover;
 }
 
 /* Mobilfreundlich */
@@ -307,6 +312,7 @@
   .image-gallery img {
     width: 48%;
   }
+  
 }
 </style>
 
