@@ -39,47 +39,31 @@
     }
 
     /* Hintergrundblock für das Logo */
-.logo-container {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  z-index: 1010;
-}
-
 .logo-background {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: 88px;
+  width: 320px;
   background: rgba(255, 255, 255, 0.75);
+  z-index: 1005;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  padding: 8px 16px;
-  flex-shrink: 0;
 }
 
+/* Logo oben links */
 .logo {
-  height: 60px;
-  width: auto;
-  margin-left: 12px;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 220px;
+  height: auto;
+  z-index: 1010;
+  background: rgba(255,255,255,0.0);
+  padding: 4px;
+  border-radius: 4px;
 }
 
-@media (max-width: 720px) {
-  .logo-container {
-    top: 12px;
-    padding-left: 8px;
-  }
-
-  .logo-background {
-    padding: 6px 12px;
-    border-radius: 8px;
-  }
-
-  .logo {
-    height: 42px;
-    margin-left: 8px;
-  }
-}
-    
 /* Sprachauswahl oben rechts */
 .language-select {
   position: absolute;
@@ -239,12 +223,8 @@
     <!-- Bild: ersetze dateiname falls nötig -->
     <img src="Renovierung im Vergleich.png" alt="Vorher und Nachher Renovierung" class="header-img">
 
-    <div class="logo-background"></div>
-
-    <div class="logo-container">
-  <div class="logo-background"></div>
-  <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços" class="logo">
-</div>
+    <!-- Logo (klein oben links) -->
+    <img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços" class="logo">
 
     <!-- Sprache oben rechts -->
     <select class="language-select" onchange="changeLanguage(this.value)" aria-label="Sprache wählen">
@@ -443,7 +423,4 @@
 
 </body>
 </html>
-
-
-
 
