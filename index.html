@@ -56,80 +56,71 @@
   position: absolute;
   top: 40px;
   left: 80px;
-  width: 220px; /* verkleinert */
+  width: 220px;
   height: auto;
-  z-index: 1010; /* über dem Hintergrundblock */
-  background: rgba(255,255,255,0.0); /* optional */
+  z-index: 1010;
+  background: rgba(255,255,255,0.0);
   padding: 4px;
   border-radius: 4px;
 }
 
- {
+/* Sprachauswahl oben rechts */
+.language-select {
   position: absolute;
-  top: 36px;
-  left: 0;
-  height: 88px;
-  width: 320px;
-  background: rgba(255, 255, 255, 0.75);
-  z-index: 1005;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  top: 12px;
+  right: 12px;
+  z-index: 1010;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
 }
 
+/* Optional: halbtransparenter Overlay-Text (z.B. Slogan) */
+.header .overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  z-index: 1010;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  font-size: 1.05rem;
+  background: rgba(0,0,0,0.25);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
 
-    }
+/* Platzhalter für Content, damit Header nicht überlappt */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 24px;
+  padding-top: calc(var(--header-height) + 30px);
+}
 
-    /* Sprachauswahl oben rechts */
-    .language-select {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      z-index: 1010;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid rgba(0,0,0,0.08);
-      background: rgba(255,255,255,0.9);
-      font-size: 0.95rem;
-    }
+.services {
+  line-height: 1.9;
+}
 
-    /* Optional: halbtransparenter Overlay-Text (z.B. Slogan) */
-    .header .overlay {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 18px;
-      z-index: 1010;
-      color: #fff;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      font-size: 1.05rem;
-      background: rgba(0,0,0,0.25);
-      padding: 6px 12px;
-      border-radius: 6px;
-    }
+.services i {
+  color: #0077cc;
+  margin-right: 10px;
+}
 
-    /* Platzhalter für Content, damit Header nicht überlappt */
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: left;
-      padding: 24px;
-      padding-top: calc(var(--header-height) + 30px);
-    }
-
-    .services { line-height: 1.9; }
-    .services i { color: #0077cc; margin-right: 10px; }
-
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 20px;
-      background-color: #25D366;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.05em;
-    }
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.05em;
+}
 
     /* Responsive: bei kleinen Bildschirmen Header-Höhe reduzieren */
 @media (max-width: 720px) {
@@ -152,8 +143,6 @@
     width: 48%;
   }
 }
-
-
 /* Galerie außerhalb des Media-Blocks */
 .image-gallery {
   display: flex;
