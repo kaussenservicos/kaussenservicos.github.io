@@ -49,6 +49,21 @@
       background: rgba(255,255,255,0.0); /* optional: weißer Hintergrund z.B. rgba(255,255,255,0.8) */
       padding: 4px;
       border-radius: 4px;
+      <div class="logo-background"></div>
+<img src="Kaussen_Servicos_Logo_vector_Trans_blau.svg" alt="Kaussen Serviços" class="logo">
+      .logo-background {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: 88px;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1005;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+
     }
 
     /* Sprachauswahl oben rechts */
@@ -163,6 +178,13 @@
   .painting-gallery img {
     width: 22%; /* Vier Bilder nebeneinander */
     max-width: none;
+}
+.logo-background {
+  top: 18px;
+  height: 66px;
+  width: 160px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   }
 }
 
