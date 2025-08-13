@@ -154,14 +154,6 @@
   transform: scale(1.02);
 }
 
-/* Mobilfreundlich */
-@media (max-width: 720px) {
-  .painting-gallery img {
-    width: 22%; /* Vier Bilder nebeneinander */
-    max-width: none;
-  }
-}
-
 /* Lightbox */
 .lightbox {
   display: none;
@@ -293,13 +285,19 @@
   <p><strong>Warum Kaussen?</strong> Erfahrung, Zuverlässigkeit, saubere Ausführung, fachkundige Beratung und Anpassung an brasilianische Wetterbedingungen.</p>
 </section>
 
-    <!-- Bildergalerie für Maler- und Lackierarbeiten -->
-<div class="image-gallery painting-gallery">
-  <img src="malen1.jpg" alt="Innenanstrich">
-  <img src="malen2.jpg" alt="Fassadenanstrich">
-  <img src="malen3.jpg" alt="Torlackierung">
-  <img src="malen4.jpg" alt="Spritzlackierung">
+    <div class="image-gallery painting-gallery">
+  <a href="#img1"><img src="malen1-thumb.jpg" alt="malen1" loading="lazy" decoding="async"></a>
+  <a href="#img2"><img src="malen2-thumb.jpg" alt="malen2" loading="lazy" decoding="async"></a>
+  <a href="#img3"><img src="malen3-thumb.jpg" alt="malen3" loading="lazy" decoding="async"></a>
+  <a href="#img4"><img src="malen4-thumb.jpg" alt="malen4" loading="lazy" decoding="async"></a>
 </div>
+
+<!-- Lightbox (große Originale) -->
+<div id="img1" class="lightbox"><a href="#"><img src="malen1.jpg" alt="malen1"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="malen2.jpg" alt="malen2"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="malen3.jpg" alt="malen3"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="malen4.jpg" alt="malen4"></a></div>
+
 
 
    <!-- Reparaturen & Schweißarbeiten – Deutsch -->
