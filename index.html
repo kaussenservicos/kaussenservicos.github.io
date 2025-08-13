@@ -38,17 +38,32 @@
       display: block;
     }
 
-    /* Logo oben links */
-    .logo {
-      position: absolute;
-      top: 40px;
-      left: 80px;
-      width: 220px;    /* verkleinert */
-      height: auto;
-      z-index: 1010;   /* über dem Header-Bild */
-      background: rgba(255,255,255,0.0); /* optional: weißer Hintergrund z.B. rgba(255,255,255,0.8) */
-      padding: 4px;
-      border-radius: 4px;
+    /* Hintergrundblock für das Logo */
+.logo-background {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: 88px;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1005;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Logo oben links */
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 220px; /* verkleinert */
+  height: auto;
+  z-index: 1010; /* über dem Hintergrundblock */
+  background: rgba(255,255,255,0.0); /* optional */
+  padding: 4px;
+  border-radius: 4px;
+}
+
  {
   position: absolute;
   top: 36px;
