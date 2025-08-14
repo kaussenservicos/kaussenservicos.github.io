@@ -405,6 +405,48 @@
   <img src="bild3.jpg" alt="schweissen3"loading="lazy">
   <img src="bild4.jpg" alt="schweissen4"loading="lazy">
 </div>
+    
+<!-- Drywall – Deutsch -->
+<section style="margin-top:40px; display:none;" id="drywall-de">
+  <h2>Trockenbau mit Drywall – moderne Lösungen für Decken und Wände</h2>
+  <p>Die Trockenbauweise mit Drywall ist die ideale Lösung für schnelle, saubere und flexible Innenraumgestaltung. Ob beim Abhängen von Decken oder Verkleiden von Wänden – Kaussen Serviços bietet Ihnen professionelle Umsetzung mit hochwertigen Materialien.</p>
+  <ul>
+    <li><strong>Schnelle Montage:</strong> Minimale Bauzeit durch vorgefertigte Elemente.</li>
+    <li><strong>Versteckte Installationen:</strong> Kabel und Technik verschwinden elegant hinter der Wand.</li>
+    <li><strong>Akustik & Dämmung:</strong> Verbesserte Raumakustik und Wärmeschutz durch integrierte Dämmstoffe.</li>
+    <li><strong>Individuelles Design:</strong> Glatte Flächen für kreative Farbkonzepte und Beleuchtungslösungen.</li>
+    <li><strong>Brandschutz & Sicherheit:</strong> Spezielle Platten sorgen für Schutz und Stabilität.</li>
+  </ul>
+  <p><strong>Warum Kaussen?</strong> Weil wir europäisches Handwerk mit brasilianischer Flexibilität verbinden – für Ergebnisse, die überzeugen.</p>
+</section>
+
+<!-- Drywall – Português -->
+<section style="margin-top:40px; display:none;" id="drywall-pt">
+  <h2>Soluções Drywall – Tetos e Paredes Modernas</h2>
+  <p>A construção em Drywall é ideal para projetos internos rápidos, limpos e flexíveis. Seja para forros ou revestimento de paredes – Kaussen Serviços oferece execução profissional com materiais de alta qualidade.</p>
+  <ul>
+    <li><strong>Instalação Rápida:</strong> Tempo de construção mínimo com elementos pré-fabricados.</li>
+    <li><strong>Instalações Ocultas:</strong> Cabos e equipamentos técnicos ficam elegantemente escondidos atrás da parede.</li>
+    <li><strong>Acústica & Isolamento:</strong> Melhor acústica e proteção térmica com materiais integrados.</li>
+    <li><strong>Design Personalizado:</strong> Superfícies lisas para cores e iluminação criativa.</li>
+    <li><strong>Segurança e Proteção contra Incêndio:</strong> Placas especiais garantem estabilidade e proteção.</li>
+  </ul>
+  <p><strong>Por que Kaussen?</strong> Combinamos artesanato europeu com flexibilidade brasileira – para resultados que impressionam.</p>
+</section>
+
+<!-- Drywall – English -->
+<section style="margin-top:40px; display:none;" id="drywall-en">
+  <h2>Drywall Solutions – Modern Ceilings and Walls</h2>
+  <p>Drywall construction is ideal for fast, clean, and flexible interior design. Whether suspending ceilings or covering walls – Kaussen Serviços provides professional execution with high-quality materials.</p>
+  <ul>
+    <li><strong>Fast Installation:</strong> Minimal construction time with prefabricated elements.</li>
+    <li><strong>Hidden Installations:</strong> Wires and technical equipment are elegantly concealed behind walls.</li>
+    <li><strong>Acoustics & Insulation:</strong> Improved room acoustics and thermal protection through integrated insulation.</li>
+    <li><strong>Custom Design:</strong> Smooth surfaces for creative color schemes and lighting solutions.</li>
+    <li><strong>Fire Safety & Protection:</strong> Special panels ensure safety and stability.</li>
+  </ul>
+  <p><strong>Why Kaussen?</strong> We combine European craftsmanship with Brazilian flexibility – for results that impress.</p>
+</section>
 
 <style>
   .image-gallery {
@@ -452,15 +494,23 @@
 
   <script>
   function changeLanguage(lang) {
-    document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-    document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
-    document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
-    document.getElementById('servicos-detalhados-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-    document.getElementById('services-detailed-en').style.display = (lang === 'en') ? 'block' : 'none';
-    document.getElementById('services-detailed-de').style.display = (lang === 'de') ? 'block' : 'none';
-    document.getElementById('services-welding-pt').style.display = (lang === 'pt') ? 'block' : 'none';
-    document.getElementById('services-welding-de').style.display = (lang === 'de') ? 'block' : 'none';
-    document.getElementById('services-welding-en').style.display = (lang === 'en') ? 'block' : 'none';
+  document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+
+  document.getElementById('servicos-detalhados-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('services-detailed-en').style.display = (lang === 'en') ? 'block' : 'none';
+  document.getElementById('services-detailed-de').style.display = (lang === 'de') ? 'block' : 'none';
+
+  document.getElementById('services-welding-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('services-welding-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('services-welding-en').style.display = (lang === 'en') ? 'block' : 'none';
+
+  // ✅ Hier die Drywall-Sektionen
+  document.getElementById('drywall-pt').style.display = (lang === 'pt') ? 'block' : 'none';
+  document.getElementById('drywall-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('drywall-en').style.display = (lang === 'en') ? 'block' : 'none';
+}
 
   }
 
