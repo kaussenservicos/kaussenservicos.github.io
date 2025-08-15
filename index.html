@@ -511,13 +511,11 @@ function changeLanguage(lang) {
     pt: "Fale conosco pelo WhatsApp",
     de: "Kontaktieren Sie uns über WhatsApp",
     en: "Contact us via WhatsApp"
-  };
-  
-  const whatsappText = document.getElementById('whatsapp-text');
-  if (whatsappText) {
-      whatsappText.textContent = whatsappTexts[lang];
-  }
-}
+};
+
+document.querySelectorAll('.whatsapp-text').forEach(span => {
+    span.textContent = whatsappTexts[lang];
+});
 
 // Automatisch Sprache setzen beim Laden
 window.addEventListener('DOMContentLoaded', () => {
