@@ -481,7 +481,7 @@
   </main>
 
   <script>
-  function changeLanguage(lang) {
+function changeLanguage(lang) {
   document.getElementById('content-pt').style.display = (lang === 'pt') ? 'block' : 'none';
   document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
   document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
@@ -494,18 +494,30 @@
   document.getElementById('services-welding-de').style.display = (lang === 'de') ? 'block' : 'none';
   document.getElementById('services-welding-en').style.display = (lang === 'en') ? 'block' : 'none';
 
-  // Drywall-Sektionen
   document.getElementById('drywall-pt').style.display = (lang === 'pt') ? 'block' : 'none';
   document.getElementById('drywall-de').style.display = (lang === 'de') ? 'block' : 'none';
   document.getElementById('drywall-en').style.display = (lang === 'en') ? 'block' : 'none';
+
+  // WhatsApp-Button-Text anpassen
+  const whatsappTexts = {
+    pt: "Fale conosco pelo WhatsApp",
+    de: "Kontaktieren Sie uns über WhatsApp",
+    en: "Contact us via WhatsApp"
+  };
+  
+  const whatsappText = document.getElementById('whatsappText');
+  if (whatsappText) {
+      whatsappText.textContent = whatsappTexts[lang];
+  }
 }
 
-  // 🧠 Automatisch Sprache setzen beim Laden
-  window.addEventListener('DOMContentLoaded', () => {
+// Automatisch Sprache setzen beim Laden
+window.addEventListener('DOMContentLoaded', () => {
     const select = document.querySelector('.language-select');
     changeLanguage(select.value);
-  });
+});
 </script>
+
 
 
 
