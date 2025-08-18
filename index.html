@@ -544,6 +544,17 @@ window.addEventListener('DOMContentLoaded', () => {
     changeLanguage(select.value);
 });
 </script>
+  // Lightbox-Schließen ohne Scrollen nach oben
+  document.querySelectorAll('.lightbox').forEach(box => {
+    box.addEventListener('click', function(event) {
+      event.preventDefault();
+      this.style.display = 'none';
+      history.replaceState(null, null, ' ');
+    });
+  });
+</script>
+  </body>
+</html>
 
 
 
